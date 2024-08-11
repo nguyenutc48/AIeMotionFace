@@ -50,7 +50,15 @@ android {
 }
 
 dependencies {
+//    implementation ("org.vosk:android:0.4.0-alpha0")
 
+    val voskVersion = "0.4.0-alpha0"
+
+    // Generic
+    implementation("com.alphacephei:vosk-api-kotlin:$voskVersion")
+
+    // Android
+    implementation("com.alphacephei:vosk-api-kotlin-android:$voskVersion")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
