@@ -50,15 +50,13 @@ android {
 }
 
 dependencies {
-//    implementation ("org.vosk:android:0.4.0-alpha0")
+// Kotlin Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
-    val voskVersion = "0.4.0-alpha0"
-
-    // Generic
-    implementation("com.alphacephei:vosk-api-kotlin:$voskVersion")
-
-    // Android
-    implementation("com.alphacephei:vosk-api-kotlin-android:$voskVersion")
+// Lifecycle components với hỗ trợ coroutines (có thể đã được bao gồm qua lifecycle-runtime-ktx)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
